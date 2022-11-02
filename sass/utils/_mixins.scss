@@ -8,3 +8,19 @@
   line-height: $lh / $fs;
   letter-spacing: $ls;
 }
+
+@mixin size($count) {
+  width: calc((100% - $typical-indent * ($count - 1)) / $count);
+}
+
+@mixin sizeMedia($viewSize) {
+  @media screen and (min-width: $viewSize) {
+    width: $viewSize;
+  }
+}
+
+@mixin contentMedia($viewSize) {
+  @media screen and (min-width: $viewSize) {
+    @content;
+  }
+}

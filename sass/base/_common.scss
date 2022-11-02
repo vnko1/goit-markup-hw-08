@@ -7,14 +7,20 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
+  @include sizeMedia($mobile);
+  @include sizeMedia($tablet);
+  @include sizeMedia($desktop);
   padding-left: 15px;
   padding-right: 15px;
   @extend %margin-centred;
 }
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+  @include contentMedia($desktop) {
+    padding: 94px 0;
+  }
 }
 
 .icons {
@@ -22,8 +28,14 @@ body {
 }
 
 .section-title {
-  margin-bottom: 50px;
-  @include font(null, 36, 42, null);
+  margin-bottom: 30px;
+
+  @include font(null, 28, 33, null);
+  @include contentMedia($desktop) {
+    margin-bottom: 50px;
+    @include font(null, 36, 42, null);
+  }
+
   text-align: center;
   color: color("main-color");
 }

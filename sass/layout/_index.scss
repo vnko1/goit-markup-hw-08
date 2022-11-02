@@ -40,11 +40,18 @@
 
 .advantage-list {
   display: flex;
+  flex-wrap: wrap;
   gap: $typical-indent;
 }
 
 .advantage-list__item {
-  width: calc((100% - 3 * $typical-indent) / 4);
+  width: 100%;
+  @include contentMedia($tablet) {
+    @include size(2);
+  }
+  @include contentMedia($desktop) {
+    @include size(4);
+  }
 }
 
 .advantage-list__container {
@@ -57,9 +64,12 @@
 }
 
 .advantage-list__title {
+  @media screen and (max-width: $tablet - 1) {
+    text-align: center;
+  }
   margin-bottom: 10px;
   @include font(null, 14, 16, null);
-  color: color("$main-color");
+  color: color("main-color");
 }
 
 .advantage-list__text {
@@ -70,6 +80,18 @@
 
 .works {
   padding-top: 0;
+  @media screen and (max-width: 1199px) {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
 }
 
 .works-list {
@@ -102,12 +124,18 @@
 
 .cards {
   display: flex;
-  margin-left: -30px;
+  flex-wrap: wrap;
+  gap: $typical-indent;
 }
 
 .cards__item {
-  width: calc((100% - 3 * $typical-indent) / 4);
-  margin-left: 30px;
+  width: 100%;
+  @include contentMedia($tablet) {
+    @include size(2);
+  }
+  @include contentMedia($desktop) {
+    @include size(4);
+  }
   background-color: color("secondary-color");
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -135,11 +163,18 @@
 .clients-list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: $typical-indent;
 }
 
 .clients-list__item {
-  width: calc((100% - 5 * $typical-indent) / 6);
+  @include size(2);
+  @include contentMedia($tablet) {
+    @include size(3);
+  }
+  @include contentMedia($desktop) {
+    @include size(6);
+  }
   height: 92px;
 }
 
