@@ -901,7 +901,7 @@ body {
 
 .filter {
   display: flex;
-  @in justify-content: center;
+  justify-content: center;
   gap: 8px;
   margin-bottom: 50px;
 }
