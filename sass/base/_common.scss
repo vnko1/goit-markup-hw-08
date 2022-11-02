@@ -1,0 +1,29 @@
+body {
+  font-family: $main-font;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: color("main-text-color");
+  background-color: color("main-bgc");
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  @extend %margin-centred;
+}
+
+.section {
+  padding: 94px 0;
+}
+
+.icons {
+  fill: currentColor;
+}
+
+.section-title {
+  margin-bottom: 50px;
+  @include font(null, 36, 42, null);
+  text-align: center;
+  color: color("main-color");
+}

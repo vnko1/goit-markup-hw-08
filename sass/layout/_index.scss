@@ -1,0 +1,167 @@
+// HERO
+.hero {
+  max-width: 1600px;
+  height: 600px;
+  padding: 200px 0;
+  @extend %margin-centred;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: color("secondary-bgc");
+  text-align: center;
+}
+
+.hero__title {
+  max-width: 696px;
+  margin-bottom: 30px;
+  @extend %margin-centred;
+  @include font(900, 44, 60, 0.06em);
+  text-transform: uppercase;
+  color: color("secondary-color");
+}
+
+.hero__button {
+  min-width: 216px;
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  @include animation(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: color("hover-accent-color");
+  }
+}
+
+// BENEFITS
+
+.advantage-list {
+  display: flex;
+  gap: $typical-indent;
+}
+
+.advantage-list__item {
+  width: calc((100% - 3 * $typical-indent) / 4);
+}
+
+.advantage-list__container {
+  @extend %flex-centred;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: color("teams-bgc");
+  border-radius: 4px;
+}
+
+.advantage-list__title {
+  margin-bottom: 10px;
+  @include font(null, 14, 16, null);
+  color: color("$main-color");
+}
+
+.advantage-list__text {
+  line-height: calc(24 / 14);
+}
+
+// WORKS
+
+.works {
+  padding-top: 0;
+}
+
+.works-list {
+  display: flex;
+  gap: $typical-indent;
+}
+
+.works-list__item {
+  position: relative;
+  width: calc((100% - 2 * $typical-indent) / 3);
+}
+
+.works-list__text {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 27px 0;
+  text-align: center;
+  @include font(700, 14, 16, null);
+  text-transform: uppercase;
+  color: color("secondary-color");
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+// TEAMS
+
+.teams {
+  background-color: color("teams-bgc");
+}
+
+.cards {
+  display: flex;
+  margin-left: -30px;
+}
+
+.cards__item {
+  width: calc((100% - 3 * $typical-indent) / 4);
+  margin-left: 30px;
+  background-color: color("secondary-color");
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.cards__container {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.cards__title {
+  margin-bottom: 10px;
+  @include font(500, 16, 19, null);
+  color: color("main-color");
+}
+
+.cards__text {
+  margin-bottom: 16px;
+  @include font(null, 16, 19, null);
+}
+
+// CLIENTS
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+  gap: $typical-indent;
+}
+
+.clients-list__item {
+  width: calc((100% - 5 * $typical-indent) / 6);
+  height: 92px;
+}
+
+.clients-list__link {
+  width: 100%;
+  height: 100%;
+  border: 1px solid color("main-icon-color");
+  border-radius: 4px;
+  @extend %flex-centred;
+  color: color("main-icon-color");
+  @include animation(border-color);
+
+  &:hover,
+  &:focus {
+    border-color: color("accent-color");
+
+    .clients-list__icon {
+      fill: color("accent-color");
+    }
+  }
+}
+
+.clients-list__icon {
+  @include animation(fill);
+}

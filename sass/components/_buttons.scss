@@ -1,0 +1,30 @@
+.button {
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  @include font(700, 16, 30, 0.06em);
+  background-color: color("accent-color");
+  color: color("secondary-color");
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  @extend %flex-centred;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  @include animation(fill);
+
+  &:hover,
+  &:focus {
+    fill: color("accent-color");
+  }
+}

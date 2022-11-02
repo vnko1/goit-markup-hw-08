@@ -1,0 +1,83 @@
+.footer {
+  padding: 60px 0;
+  background-color: color("secondary-bgc");
+}
+
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.address-list__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address-list__link {
+  @include animation(color);
+  line-height: calc(24 / 14);
+  color: color("footer-links-color");
+
+  &:hover,
+  &:focus {
+    color: color("accent-color");
+  }
+}
+
+.address-list__link--light {
+  color: color("secondary-color");
+}
+
+.footer__socials-container {
+  margin-left: 70px;
+}
+
+.socials-container__text {
+  margin-bottom: 20px;
+  @include font(700, 14, 16, null);
+  text-transform: uppercase;
+  color: color("secondary-color");
+}
+
+.footer-form {
+  display: flex;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.footer-form__text {
+  display: block;
+  margin-bottom: 20px;
+  @include font(700, 14, 16, null);
+  text-transform: uppercase;
+  color: color("secondary-color");
+}
+
+.footer-form__input {
+  width: 358px;
+  padding: 16px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: color("secondary-color");
+  background-color: transparent;
+
+  &::placeholder {
+    @include font(null, 16, 20, null);
+    color: color("footer-links-color");
+    background-color: transparent;
+  }
+}
+
+.footer-form__button {
+  align-self: flex-end;
+  @extend %flex-centred;
+  gap: 10px;
+  min-width: 200px;
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}

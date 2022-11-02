@@ -1,0 +1,25 @@
+$transition-duration-value: 250ms;
+$timing-function-value: cubic-bezier(0.4, 0, 0.2, 1);
+$typical-indent: 30px;
+$main-font: "Roboto", sans-serif;
+$logo-font: "Raleway", sans-serif;
+
+$colors: (
+  "header-logo-color": #000,
+  "main-color": #212121,
+  "secondary-color": #fff,
+  "main-text-color": #757575,
+  "accent-color": #2196f3,
+  "btn-bgc": #f5f4fa,
+  "hover-accent-color": #188ce8,
+  "footer-links-color": rgba(255, 255, 255, 0.6),
+  "main-icon-color": #afb1b8,
+  "main-bgc": #fff,
+  "secondary-bgc": #2f303a,
+  "teams-bgc": #f5f4fa,
+  "border-color": #eee,
+);
+
+@function color($key) {
+  @return map-get($colors, $key);
+}
