@@ -18,6 +18,9 @@
 }
 
 .header__nav-list {
+  @media screen and (max-width: $tablet - 1px) {
+    display: none;
+  }
   display: flex;
   align-items: center;
   margin-left: 93px;
@@ -73,6 +76,9 @@
 }
 
 .header__contacts-list {
+  @media screen and (max-width: $tablet - 1px) {
+    display: none;
+  }
   display: flex;
   margin-left: auto;
   align-items: center;

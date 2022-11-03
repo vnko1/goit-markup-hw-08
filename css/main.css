@@ -671,6 +671,11 @@ body.modal-open {
   margin-left: 93px;
   gap: 50px;
 }
+@media screen and (max-width: 767px) {
+  .header__nav-list {
+    display: none;
+  }
+}
 
 .nav-list__link {
   display: block;
@@ -722,6 +727,11 @@ body.modal-open {
   margin-left: auto;
   align-items: center;
   gap: 30px;
+}
+@media screen and (max-width: 767px) {
+  .header__contacts-list {
+    display: none;
+  }
 }
 
 .contacts-list__link {
