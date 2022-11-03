@@ -1067,6 +1067,7 @@ body.modal-open {
 
 .products__item {
   width: 100%;
+  border: 1px solid #eee;
 }
 @media screen and (min-width: 768px) {
   .products__item {
@@ -1081,6 +1082,7 @@ body.modal-open {
 
 .products__link {
   display: block;
+  height: 100%;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .products__link:hover, .products__link:focus {
@@ -1120,7 +1122,6 @@ body.modal-open {
 
 .products__container {
   padding: 20px 24px;
-  border: 1px solid #eee;
   background-color: #fff;
 }
 
