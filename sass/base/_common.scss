@@ -4,6 +4,10 @@ body {
   letter-spacing: 0.03em;
   color: color("main-text-color");
   background-color: color("main-bgc");
+
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 
 .container {

@@ -22,6 +22,10 @@
   @include font(500, 16, 26, 0.03em);
   background-color: color("btn-bgc");
   color: color("main-color");
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  cursor: pointer;
   transition: background-color $transition-duration-value $timing-function-value,
     color $transition-duration-value $timing-function-value,
     box-shadow $transition-duration-value $timing-function-value;

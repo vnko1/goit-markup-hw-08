@@ -10,6 +10,7 @@
     transform $transition-duration-value $timing-function-value,
     visibility $transition-duration-value $timing-function-value;
   background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
 }
 
 .is-hidden {
@@ -24,8 +25,17 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  height: 581px;
+  width: 100%;
+  @include contentMedia($mobile) {
+    width: 450px;
+    height: 609px;
+  }
+
+  @include contentMedia($desktop) {
+    width: 528px;
+    height: 581px;
+  }
+
   transform: translate(-50%, -50%);
   @include animation(transform);
   background-color: color("main-bgc");
@@ -40,7 +50,10 @@
 
 .modal__text {
   margin-bottom: 12px;
-  @include font(700, 20, 23, null);
+  @include font(700, 20, 30, null);
+  @include contentMedia($desktop) {
+    @include font(700, 20, 23, null);
+  }
   text-align: center;
   color: color("main-color");
 }
@@ -103,7 +116,7 @@
 
 .form__textarea {
   resize: none;
-  width: 448px;
+  width: 100%;
   min-height: 120px;
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -115,7 +128,11 @@
   }
 
   &::placeholder {
-    @include font(null, 12, 14, 0.01em);
+    @include font(null, 14, 16, 0.01em);
+    @include contentMedia($desktop) {
+      @include font(null, 12, 14, 0.01em);
+    }
+
     font-size: 12px;
     line-height: calc(14 / 12);
     letter-spacing: 0.01em;
@@ -131,7 +148,10 @@
 
 .checkbox-label__text {
   margin-bottom: 0;
-  @include font(null, 14, 24, 0.03em);
+  @include font(null, 12, 14, 0.03em);
+  @include contentMedia($desktop) {
+    @include font(null, 14, 24, 0.03em);
+  }
 }
 
 .checkbox-label__input {
