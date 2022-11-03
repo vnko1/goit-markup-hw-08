@@ -1,8 +1,20 @@
 .filter {
   display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  margin-bottom: 40px;
+  @media screen and (max-width: $tablet - 1px) {
+    row-gap: 15px;
+    max-width: 326px;
+  }
+  @include contentMedia($tablet) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  @include contentMedia($desktop) {
+    margin-bottom: 50px;
+  }
 }
 
 .filter__button {
@@ -15,7 +27,7 @@
     box-shadow $transition-duration-value $timing-function-value;
 
   .filter__item:first-child & {
-    padding: 6px 25px;
+    padding: 6px 24.8px;
   }
 
   &:hover,
@@ -34,11 +46,18 @@
 }
 
 .products__item {
-  width: calc((100% - 2 * $typical-indent) / 3);
+  width: 100%;
+  @include contentMedia($tablet) {
+    @include size(2);
+  }
+
+  @include contentMedia($desktop) {
+    @include size(3);
+  }
 }
 
 .products__link {
-  display: inline-block;
+  display: block;
   @include animation(box-shadow);
 
   &:hover,
@@ -62,9 +81,15 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 63px 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
   transform: translateY(100%);
   @include animation(transform);
+  @media screen and (max-width: 330px) {
+    @include font(null, 16, 26, null);
+  }
   @include font(null, 18, 28, null);
   color: color("secondary-color");
   background-color: rgba(33, 150, 243, 0.9);
@@ -74,6 +99,12 @@
   padding: 20px 24px;
   border: 1px solid color("border-color");
   background-color: color("main-bgc");
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    .products__item:nth-child(1) & {
+      padding-bottom: 56px;
+    }
+  }
 }
 
 .products__title {

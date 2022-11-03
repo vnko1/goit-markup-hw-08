@@ -1,31 +1,56 @@
 // HERO
 .hero {
   max-width: 1600px;
-  height: 600px;
-  padding: 200px 0;
+  padding: 118px 0;
   @extend %margin-centred;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/hero-bg.jpg);
+    url(../../images/img-hero-480.jpg);
+  @include bgcPixelize(480);
+  @include contentMedia($tablet) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../images/img-hero-768.jpg);
+    @include bgcPixelize(768);
+  }
+  @include contentMedia($desktop) {
+    padding: 200px 0;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../images/img-hero-1200.jpg);
+    @include bgcPixelize(1200);
+  }
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   background-color: color("secondary-bgc");
   text-align: center;
 }
 
 .hero__title {
-  max-width: 696px;
+  max-width: 360px;
   margin-bottom: 30px;
   @extend %margin-centred;
-  @include font(900, 44, 60, 0.06em);
+  @include font(900, 26, 42, 0.06em);
+  @include contentMedia($desktop) {
+    max-width: 696px;
+    @include font(900, 44, 60, 0.06em);
+  }
   text-transform: uppercase;
   color: color("secondary-color");
 }
 
 .hero__button {
-  min-width: 216px;
+  min-width: 200px;
+  @include contentMedia($desktop) {
+    min-width: 216px;
+  }
   height: 50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   @include animation(background-color);
@@ -64,7 +89,7 @@
 }
 
 .advantage-list__title {
-  @media screen and (max-width: $tablet - 1) {
+  @media screen and (max-width: $tablet - 1px) {
     text-align: center;
   }
   margin-bottom: 10px;
