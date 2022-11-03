@@ -21,6 +21,9 @@
 }
 
 .modal {
+  @media screen and (max-width: 354px) {
+    padding: 40px 20px;
+  }
   padding: 40px;
   position: absolute;
   top: 50%;
@@ -174,12 +177,6 @@
   transition: fill $transition-duration-value $timing-function-value,
     border-color $transition-duration-value $timing-function-value,
     background-color $transition-duration-value $timing-function-value;
-
-  .checkbox-label__input:checked + & {
-    fill: color("secondary-color");
-    border-color: transparent;
-    background-color: color("accent-color");
-  }
 
   .checkbox-label__input:checked + & {
     fill: color("secondary-color");
