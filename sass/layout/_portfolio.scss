@@ -46,6 +46,7 @@
 .products {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
   gap: $typical-indent;
 }
 
@@ -104,11 +105,11 @@
   border: 1px solid color("border-color");
   background-color: color("main-bgc");
 
-  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
-    .products__item:nth-child(1) & {
-      padding-bottom: 56px;
-    }
-  }
+  // @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+  //   .products__item:nth-child(1) & {
+  //     padding-bottom: 56px;
+  //   }
+  // }
 }
 
 .products__title {
