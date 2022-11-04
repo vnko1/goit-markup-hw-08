@@ -43,3 +43,10 @@ body {
   text-align: center;
   color: color("main-color");
 }
+
+.is-hidden {
+  visibility: hidden;
+  transform: scaleX(0);
+  opacity: 0;
+  pointer-events: none;
+}
