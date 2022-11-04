@@ -40,7 +40,7 @@
   border-radius: 4px;
 
   .backdrop.is-hidden & {
-    transform: translate(-50%, 100%);
+    transform: translate(-50%, 100%) scaleX(0);
   }
 }
 

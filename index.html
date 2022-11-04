@@ -17,7 +17,7 @@
             lang="en"
             ><span class="logo__accent">Web</span>Studio</a
           >
-          <button class="menu-open-btn">
+          <button class="menu-open-btn" data-menu-open>
             <svg class="menu-open-btn__icon" width="40" height="40">
               <use href="./images/sprite.svg#burger-icon"></use>
             </svg>
@@ -62,9 +62,8 @@
           </li>
         </ul>
       </div>
-      <div class="mob-menu">
-        <!-- <div class="container nav-menu"></div> -->
-        <button class="menu-close-btn">
+      <div class="mob-menu is-hidden" data-menu>
+        <button class="menu-close-btn" data-menu-close>
           <svg class="menu-close-btn__icon" width="40" height="40">
             <use href="./images/sprite.svg#cross-icon"></use>
           </svg>
@@ -72,7 +71,9 @@
         <nav class="mob-menu__navigation">
           <ul class="mob-menu__list menu__list list">
             <li class="menu__item">
-              <a href="./index.html" class="menu__link link">Студія</a>
+              <a href="./index.html" class="menu__link menu__link--current link"
+                >Студія</a
+              >
             </li>
             <li class="menu__item">
               <a href="./portfolio.html" class="menu__link link">Портфоліо</a>
@@ -801,7 +802,7 @@
         </form>
       </div>
     </div>
-    <script src="./js/menu.js"></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
