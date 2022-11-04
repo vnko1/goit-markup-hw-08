@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <header class="header">
+    <!-- <header class="header">
       <div class="container header__container">
         <nav class="nav header__nav">
           <a
@@ -69,7 +69,7 @@
           </li>
         </ul>
       </div>
-    </header>
+    </header> -->
     <main>
       <section class="hero">
         <div class="container">
@@ -140,6 +140,11 @@
             <li class="works-list__item">
               <img
                 class="works-list__image image-block"
+                srcset="
+                  ./images/devimg.jpg    1x,
+                  ./images/devimg@2x.jpg 2x,
+                  ./images/devimg@3x.jpg 3x
+                "
                 src="./images/devimg.jpg"
                 alt="Розробка"
                 width="370"
@@ -150,6 +155,11 @@
             <li class="works-list__item">
               <img
                 class="works-list__image image-block"
+                srcset="
+                  ./images/desimg.jpg    1x,
+                  ./images/desimg@2x.jpg 2x,
+                  ./images/desimg@3x.jpg 3x
+                "
                 src="./images/desimg.jpg"
                 alt="Дизайн"
                 width="370"
@@ -160,6 +170,11 @@
             <li class="works-list__item">
               <img
                 class="works-list__image image-block"
+                srcset="
+                  ./images/modimg.jpg    1x,
+                  ./images/modimg@2x.jpg 2x,
+                  ./images/modimg@3x.jpg 3x
+                "
                 src="./images/modimg.jpg"
                 alt="Моделювання"
                 width="370"
@@ -175,14 +190,38 @@
           <h2 class="teams__title section-title">Наша команда</h2>
           <ul class="cards list">
             <li class="cards__item">
-              <img
-                class="cards__image image-block"
-                srcset="./images/pdimg@2x.jpg 2x, ./images/pdimg@3x.jpg 3x"
-                src="./images/pdimg.jpg"
-                alt="Дизайнер"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/pdimg-1200.jpg    1x,
+                    ./images/pdimg-1200@2x.jpg 2x,
+                    ./images/pdimg-1200@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/pdimg-768.jpg    1x,
+                    ./images/pdimg-768@2x.jpg 2x,
+                    ./images/pdimg-768@3x.jpg 3x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/pdimg-480.jpg    1x,
+                    ./images/pdimg-480@2x.jpg 2x,
+                    ./images/pdimg-480@3x.jpg 3x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  class="cards__image image-block"
+                  src="./images/pdimg-480.jpg"
+                  alt="Дизайнер"
+                  width="450"
+                />
+              </picture>
               <div class="cards__container">
                 <h3 class="cards__title">Ігор Дем'яненко</h3>
                 <p class="cards__text" lang="en">Product Designer</p>
@@ -235,14 +274,38 @@
               </div>
             </li>
             <li class="cards__item">
-              <img
-                class="cards__image image-block"
-                srcset="./images/feimg@2x.jpg 2x, ./images/feimg@3x.jpg 3x"
-                src="./images/feimg.jpg"
-                alt="Фронтенд розробник"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/feimg-1200.jpg    1x,
+                    ./images/feimg-1200@2x.jpg 2x,
+                    ./images/feimg-1200@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/feimg-768.jpg    1x,
+                    ./images/feimg-768@2x.jpg 2x,
+                    ./images/feimg-768@3x.jpg 3x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/feimg-480.jpg    1x,
+                    ./images/feimg-480@2x.jpg 2x,
+                    ./images/feimg-480@3x.jpg 3x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  class="cards__image image-block"
+                  src="./images/feimg-480.jpg"
+                  alt="Фронтенд розробник"
+                  width="450"
+                />
+              </picture>
               <div class="cards__container">
                 <h3 class="cards__title">Ольга Рєпіна</h3>
                 <p class="cards__text" lang="en">Frontend Developer</p>
@@ -295,14 +358,38 @@
               </div>
             </li>
             <li class="cards__item">
-              <img
-                class="cards__image image-block"
-                srcset="./images/mrkimg@2x.jpg 2x, ./images/mrkimg@3x.jpg 3x"
-                src="./images/mrkimg.jpg"
-                alt="Маркетолог"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mrkimg-1200.jpg    1x,
+                    ./images/mrkimg-1200@2x.jpg 2x,
+                    ./images/mrkimg-1200@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/mrkimg-768.jpg    1x,
+                    ./images/mrkimg-768@2x.jpg 2x,
+                    ./images/mrkimg-768@3x.jpg 3x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mrkimg-480.jpg    1x,
+                    ./images/mrkimg-480@2x.jpg 2x,
+                    ./images/mrkimg-480@3x.jpg 3x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  class="cards__image image-block"
+                  src="./images/mrkimg-480.jpg"
+                  alt="Маркетолог"
+                  width="450"
+                />
+              </picture>
               <div class="cards__container">
                 <h3 class="cards__title">Микола Тарасов</h3>
                 <p class="cards__text" lang="en">Marketing</p>
@@ -355,14 +442,38 @@
               </div>
             </li>
             <li class="cards__item">
-              <img
-                class="cards__image image-block"
-                srcset="./images/udimg@2x.jpg 2x, ./images/udimg@3x.jpg 3x"
-                src="./images/udimg.jpg"
-                alt="Дизайнер інтерфейсу"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/udimg-1200.jpg    1x,
+                    ./images/udimg-1200@2x.jpg 2x,
+                    ./images/udimg-1200@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/udimg-768.jpg    1x,
+                    ./images/udimg-768@2x.jpg 2x,
+                    ./images/udimg-768@3x.jpg 3x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/udimg-480.jpg    1x,
+                    ./images/udimg-480@2x.jpg 2x,
+                    ./images/udimg-480@3x.jpg 3x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  class="cards__image image-block"
+                  src="./images/udimg-480.jpg"
+                  alt="Дизайнер інтерфейсу"
+                  width="450"
+                />
+              </picture>
               <div class="cards__container">
                 <h3 class="cards__title">Михайло Єрмаков</h3>
                 <p class="cards__text" lang="en">UI Designer</p>
