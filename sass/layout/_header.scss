@@ -7,6 +7,9 @@
     display: flex;
     align-items: center;
   }
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    justify-content: space-between;
+  }
 }
 
 .header__nav {
@@ -16,7 +19,7 @@
 
 .header__logo {
   padding: 16px 0;
-  @include contentMedia($desktop) {
+  @include contentMedia($tablet) {
     padding-top: 24px;
     padding-bottom: 25px;
   }
@@ -28,8 +31,13 @@
   }
   display: flex;
   align-items: center;
-  margin-left: 93px;
   gap: 50px;
+  @include contentMedia($tablet) {
+    margin-left: 88px;
+  }
+  @include contentMedia($desktop) {
+    margin-left: 93px;
+  }
 }
 
 .nav-list__link {
@@ -86,8 +94,16 @@
   }
   display: flex;
   margin-left: auto;
-  align-items: center;
-  gap: 30px;
+  @include contentMedia($tablet) {
+    gap: 10px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  @include contentMedia($desktop) {
+    gap: 30px;
+  }
 }
 
 .contacts-list__link {
@@ -95,6 +111,10 @@
   align-items: center;
   color: currentColor;
   @include animation(color);
+  @include font(500, 12, 14, 0.02em);
+  @include contentMedia($desktop) {
+    @include font(500, 14, 16, 0.02em);
+  }
 
   &:hover,
   &:focus {
@@ -106,15 +126,8 @@
 }
 
 .contacts-list__icon {
-  margin-right: 10px;
-}
-
-.menu-open-btn {
-  margin-left: auto;
-  @extend %button;
-  @extend %flex-centred;
-
-  @include contentMedia($tablet) {
-    display: none;
+  margin-right: 8px;
+  @include contentMedia($desktop) {
+    margin-right: 10px;
   }
 }

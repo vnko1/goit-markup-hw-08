@@ -1,3 +1,13 @@
+.menu-open-btn {
+  margin-left: auto;
+  @extend %button;
+  @extend %flex-centred;
+
+  @include contentMedia($tablet) {
+    display: none;
+  }
+}
+
 .mob-menu {
   display: flex;
   flex-direction: column;

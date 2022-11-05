@@ -1,6 +1,6 @@
 .logo {
   font-family: $logo-font;
-  @include font(700, 23, 28, 0.03em);
+  @include font(700, 24, 28, 0.03em);
   @include contentMedia($desktop) {
     @include font(700, 26, 31, 0.03em);
   }
