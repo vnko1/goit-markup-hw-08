@@ -11,6 +11,7 @@
   // @include contentMedia($desktop) {
   //   min-width: $desktop;
   // }
+
   width: 100%;
   @include sizeMedia($mobile);
   @include sizeMedia($tablet);
