@@ -3,15 +3,15 @@
   max-width: 1600px;
   padding: 118px 0;
   @extend %margin-centred;
-  background-image: $bg-gradient, url(../../images/img-hero-480.jpg);
+  background-image: $bg-gradient, url(../images/img-hero-480.jpg);
   @include bgcPixelize(480);
   @include contentMedia($tablet) {
-    background-image: $bg-gradient, url(../../images/img-hero-768.jpg);
+    background-image: $bg-gradient, url(../images/img-hero-768.jpg);
     @include bgcPixelize(768);
   }
   @include contentMedia($desktop) {
     padding: 200px 0;
-    background-image: $bg-gradient, url(../../images/img-hero-1200.jpg);
+    background-image: $bg-gradient, url(../images/img-hero-1200.jpg);
     @include bgcPixelize(1200);
   }
   background-position: center;
