@@ -5,12 +5,15 @@
   width: 100vw;
   height: 100vh;
   transform: scaleX(1);
-  opacity: 1;
   transition: opacity $transition-duration-value $timing-function-value,
     transform $transition-duration-value $timing-function-value,
     visibility $transition-duration-value $timing-function-value;
   background-color: rgba(0, 0, 0, 0.2);
   overflow-y: scroll;
+
+  &.is-hidden {
+    transform: scaleX(0);
+  }
 }
 
 .modal {
@@ -40,7 +43,7 @@
   border-radius: 4px;
 
   .backdrop.is-hidden & {
-    transform: translate(-50%, 100%) scaleX(0);
+    transform: translate(-50%, 100%);
   }
 }
 
