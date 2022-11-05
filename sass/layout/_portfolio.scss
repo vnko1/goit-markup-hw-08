@@ -3,10 +3,11 @@
   flex-wrap: wrap;
   column-gap: 8px;
   margin-bottom: 40px;
-  @media screen and (max-width: $tablet - 1px) {
+  @include mwMedia($tablet - 1px) {
     row-gap: 15px;
     max-width: 326px;
   }
+
   @include contentMedia($tablet) {
     margin-bottom: 30px;
     justify-content: center;

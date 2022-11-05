@@ -75,11 +75,11 @@
 }
 
 .advantage-list__title {
-  @media screen and (max-width: $tablet - 1px) {
-    text-align: center;
-  }
   margin-bottom: 10px;
   @include font(null, 14, 16, null);
+  @include mwMedia($tablet - 1px) {
+    text-align: center;
+  }
   color: color("main-color");
 }
 
@@ -91,7 +91,7 @@
 
 .works {
   padding-top: 0;
-  @media screen and (max-width: 1199px) {
+  @include mwMedia($desktop - 1px) {
     position: absolute;
     white-space: nowrap;
     width: 1px;
@@ -112,7 +112,7 @@
 
 .works-list__item {
   position: relative;
-  width: calc((100% - 2 * $typical-indent) / 3);
+  @include size(3);
 }
 
 .works-list__text {
