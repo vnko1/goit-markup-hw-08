@@ -52,7 +52,7 @@
 
 .products__item {
   width: 100%;
-
+  border: 1px solid color("border-color");
   @include contentMedia($tablet) {
     @include size(2);
   }
@@ -60,13 +60,11 @@
   @include contentMedia($desktop) {
     @include size(3);
   }
-  border: 1px solid color("border-color");
 }
 
 .products__link {
-  // outline: 1px solid tomato;
   display: block;
-  height: 100%;
+
   @include animation(box-shadow);
 
   &:hover,

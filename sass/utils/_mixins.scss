@@ -25,6 +25,18 @@
   }
 }
 
+@mixin mwMedia($viewSize) {
+  @media screen and (max-width: $viewSize) {
+    @content;
+  }
+}
+
+@mixin andMedia($minSize, $maxSize) {
+  @media screen and (min-width: $minSize) and (max-width: $maxSize) {
+    @content;
+  }
+}
+
 @mixin bgcPixelize($size) {
   @media screen and (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),

@@ -30,3 +30,30 @@
     fill: color("accent-color");
   }
 }
+
+.menu-open-btn {
+  margin-left: auto;
+  @extend %button;
+  @extend %flex-centred;
+
+  @include contentMedia($tablet) {
+    display: none;
+  }
+}
+
+.menu-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  @extend %button;
+  @extend %flex-centred;
+
+  &__icon {
+    @include animation(fill);
+  }
+
+  &:hover &__icon,
+  &:focus &__icon {
+    fill: color("accent-color");
+  }
+}
