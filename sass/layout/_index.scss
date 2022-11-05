@@ -1,6 +1,11 @@
 // HERO
 .hero {
   max-width: 1600px;
+  @include sizeMedia($mobile);
+  @include sizeMedia($tablet);
+  @include contentMedia($desktop) {
+    width: 100%;
+  }
   padding: 118px 0;
   @extend %margin-centred;
   background-image: $bg-gradient, url(../../images/img-hero-480.jpg);
