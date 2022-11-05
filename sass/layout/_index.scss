@@ -1,23 +1,6 @@
 // HERO
 .hero {
   max-width: 1600px;
-  // @include contentMedia($mobile) {
-  //   min-width: $mobile;
-  // }
-  // @include contentMedia($tablet) {
-  //   min-width: $tablet;
-  // }
-
-  // @include contentMedia($desktop) {
-  //   min-width: $desktop;
-  // }
-
-  width: 100%;
-  @include sizeMedia($mobile);
-  @include sizeMedia($tablet);
-  @include contentMedia($desktop) {
-    width: 100%;
-  }
   padding: 118px 0;
   @extend %margin-centred;
   background-image: $bg-gradient, url(../../images/img-hero-480.jpg);
